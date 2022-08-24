@@ -5,8 +5,7 @@ metadata:
   namespace: fleet-default
 spec:
   branch: main
-  clientSecretName: secret
-  insecureSkipTLSVerify: true
+  insecureSkipTLSVerify: false
   paths:
   - /rancher/logging-crd
   - /rancher/logging
