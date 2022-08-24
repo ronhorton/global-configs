@@ -1,0 +1,18 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: installs
+  namespace: fleet-default
+spec:
+  branch: main
+  clientSecretName: secret
+  insecureSkipTLSVerify: true
+  paths:
+  - /rancher/logging-crd
+  - /rancher/logging
+  - /rancher/monitoring-crd
+  - /rancher/monitoring
+  paused: false
+  repo: https://github.com/ibrokethecloud/core-bundles
+  targets:
+  - clusterGroup: installs
